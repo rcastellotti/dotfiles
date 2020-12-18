@@ -1,6 +1,7 @@
 [[ $- = *i* ]] && source ~/.conf/zsh/liquidprompt/liquidprompt
 source ~/.conf/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.conf/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
