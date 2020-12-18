@@ -1,0 +1,26 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "editor.fontFamily": "JetBrains Mono",
+    "[latex]": {
+        "editor.rulers": [
+            150
+        ],
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wrappingIndent": "same",
+        "editor.wordWrapColumn": 150
+    }
+}
