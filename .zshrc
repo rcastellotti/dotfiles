@@ -63,7 +63,9 @@ alias grm='git rm'
 alias gst='git status'
 alias gout="git checkout"
 alias gam="git commit --amend"
+alias gsh="git stash"
 alias gbr='xdg-open "https://gitlab.com/$(git remote get-url origin| cut -c16-)"'
+
 alias dcup="docker-compose up"
 alias dcdown="docker-compose down"
 alias dcstop="docker-compose stop"
@@ -72,6 +74,7 @@ alias dp="docker push"
 alias dls="docker images ls"
 alias dcls="docker container list"
 alias dps="docker ps"
+
 # color candy
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 if [[ "$TERM" != dumb ]] && (( $+commands[grc] )) ; then
