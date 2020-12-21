@@ -3,6 +3,7 @@ This dotfiles are based on [this](https://www.atlassian.com/git/tutorials/dotfil
 + [Download vscode](https://code.visualstudio.com/docs/setup/linux)
 + [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 + ssh keys on github/gitlab
++ `git clone --bare https://gitlab.com/rcastellotti/dotfiles .dotfiles`
 + `sudo apt install neovim ranger zsh bat grc`
 + ```bash
 	git config --global user.name "rcastellotti"
