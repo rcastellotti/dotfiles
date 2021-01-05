@@ -114,3 +114,6 @@ if [[ "$TERM" != dumb ]] && (( $+commands[grc] )) ; then
   unset cmds cmd
 fi
 
+export PATH=$PATH:~/go/bin
+export GOROOT=/usr/local/go
+export GOPATH=~/go

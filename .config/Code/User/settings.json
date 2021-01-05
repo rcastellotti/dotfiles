@@ -1,5 +1,4 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
@@ -15,12 +14,17 @@
         }
     ],
     "editor.fontFamily": "JetBrains Mono",
-    "[latex]": {
-        "editor.rulers": [
-            150
-        ],
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.wrappingIndent": "same",
-        "editor.wordWrapColumn": 150
-    }
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "explorer.confirmDelete": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+
 }
