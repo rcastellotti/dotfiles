@@ -21,14 +21,15 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 #add timestamp for each entry
 setopt EXTENDED_HISTORY   
-# edit current command in vim using ESC-v
-autoload -z edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
+
 export EDITOR=/usr/bin/nvim
 export PATH=$PATH:~/scripts
 export PATH=$PATH:~/stagit
 export QT_QPA_PLATFORMTHEME=qt5ct
+export PATH=$PATH:~/go/bin
+export GOROOT=/usr/local/go
+export GOPATH=~/go
+
 alias r="ranger"
 alias vim="nvim"
 alias vconf="nvim ~/.config/nvim/init.vim"
@@ -40,10 +41,6 @@ alias xclip="xclip -selection c"
 alias o="xdg-open"
 alias httpy="python3 -m http.server && xdg-open http://localhost:8000"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-upload(){
-		rsync -avz "$1" root@s.rcastellotti.dev:/var/www/s.rcastellotti.dev
-}
 alias ls='ls --color'
 alias la="grc ls -la --color"
 alias ll="grc ls -ll --color"
@@ -65,15 +62,6 @@ alias gout="git checkout"
 alias gam="git commit --amend"
 alias gsh="git stash"
 alias gbr='xdg-open "https://gitlab.com/$(git remote get-url origin| cut -c16-)"'
-
-alias dcup="docker-compose up"
-alias dcdown="docker-compose down"
-alias dcstop="docker-compose stop"
-alias dpu="docker pull"
-alias dp="docker push"
-alias dls="docker images ls"
-alias dcls="docker container list"
-alias dps="docker ps"
 
 # color candy
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -114,6 +102,3 @@ if [[ "$TERM" != dumb ]] && (( $+commands[grc] )) ; then
   unset cmds cmd
 fi
 
-export PATH=$PATH:~/go/bin
-export GOROOT=/usr/local/go
-export GOPATH=~/go
