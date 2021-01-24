@@ -30,6 +30,10 @@ export PATH=$PATH:~/go/bin
 export GOROOT=/usr/local/go
 export GOPATH=~/go
 
+pct(){
+	http https://movies-v2.api-fetch.sh/$1/$2
+}
+
 alias r="ranger"
 alias vim="nvim"
 alias vconf="nvim ~/.config/nvim/init.vim"
@@ -39,7 +43,7 @@ alias cvenv="python3 -m venv venv"
 alias avenv="source venv/bin/activate"
 alias xclip="xclip -selection c"
 alias o="xdg-open"
-alias httpy="python3 -m http.server && xdg-open http://localhost:8000"
+alias httpy="python3 -m http.server"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='ls --color'
 alias la="grc ls -la --color"
@@ -61,7 +65,7 @@ alias gst='git status'
 alias gout="git checkout"
 alias gam="git commit --amend"
 alias gsh="git stash"
-alias gbr='xdg-open "https://gitlab.com/$(git remote get-url origin| cut -c16-)"'
+alias gbr="xdg-open git remote get-url origin | sed -e 's/git\@/https:\/\//;s/:/\//2'"
 
 # color candy
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
