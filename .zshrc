@@ -65,12 +65,7 @@ alias gst='git status'
 alias gout="git checkout"
 alias gam="git commit --amend"
 alias gsh="git stash"
-
-function gitbrowser(){
-	xdg-open $(git remote get-url origin | sed -e 's/git\@/https:\/\//;s/:/\//2')
-
-}
-alias gbr=gitbrowser
+alias gbr='xdg-open $(git remote get-url origin | sed -e "s/git\@/https:\/\//;s/:/\//2") &>/dev/null'
 
 # color candy
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
