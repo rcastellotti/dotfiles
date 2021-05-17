@@ -27,6 +27,7 @@ export PATH=$PATH:~/scripts
 export PATH=$PATH:~/stagit
 export QT_QPA_PLATFORMTHEME=qt5ct
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:/home/rc/.cargo/bin
 export GOROOT=/usr/local/go
 export GOPATH=~/go
 
@@ -105,4 +106,13 @@ if [[ "$TERM" != dumb ]] && (( $+commands[grc] )) ; then
   # Clean up variables
   unset cmds cmd
 fi
+source <(kubectl completion zsh)
 
+alias k=kubectl
+complete -F __start_kubectl k
+
+
+function cd {
+        builtin cd $1
+        [ -d ./venv ] && source ./venv/bin/activate
+}
